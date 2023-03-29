@@ -1,0 +1,14 @@
+.widgetNewsShow{
+    font-size: 1rem;
+    /* border: 1px solid black; */
+    padding: 0px;
+}
+
+.widgetNewsShow p{
+    color: grey;
+    font-size: 0.8rem;
+}
+.widgetNewsShow li{
+    font-weight: 600;
+    list-style: none;
+}

@@ -1,0 +1,11 @@
+.headerEnd{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.headerEnd-text{
+    color: rgb(196, 170, 25);
+    font-size: 0.9rem;
+    /* text-decoration: underline; */
+    cursor: pointer;
+}
