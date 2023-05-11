@@ -7,5 +7,5 @@
   background-color: rgb(255, 254, 246);
   /* height: 100vh; */
   display: flex;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
 }

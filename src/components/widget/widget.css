@@ -1,10 +1,17 @@
-.widget{
+.widget {
     /* border: 1px solid black; */
     /* height: 100vh; */
-    width: 250px;
+    /* width: 250px; */
     display: flex;
     flex: 0.25;
     justify-content: center;
     /* align-items: center; */
     /* font-size: 5rem; */
+}
+
+@media screen and (max-width : 480px) {
+    .widget{
+        visibility: hidden;
+    }
+
 }

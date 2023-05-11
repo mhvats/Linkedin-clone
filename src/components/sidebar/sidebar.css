@@ -1,4 +1,4 @@
-.sidebar-main{
+.sidebar-main {
     display: flex;
     flex-direction: column;
     flex: 0.25;
@@ -7,4 +7,10 @@
     /* justify-content: center; */
     /* width: 250px; */
     /* border: 1px solid black; */
+}
+
+@media screen and (max-width:480px) {
+    .sidebar-main {
+        visibility: hidden;
+    }
 }

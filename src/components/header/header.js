@@ -24,7 +24,7 @@ function header() {
                 <HeaderRight Icon={WorkIcon} title='Job' />
                 <HeaderRight Icon={MessageIcon} title='Message' />
                 <HeaderRight Icon={NotificationsIcon} title='Notification' />
-                <HeaderRight Icon={Avatar} title='Login' />
+                <HeaderRight Icon={Avatar} title='Mehul raj' />
             </div>
             <div className='headerEnd-main'>
                 <HeaderEnd />
