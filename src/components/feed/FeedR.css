@@ -1,6 +1,8 @@
 .feed{
     /* height: 100vh; */
-    width: 250px;
+    /* width: 250px; */
+    /* overflow: scroll; */
+    /* position: fixed; */
     /* border: 1px solid black; */
     display: flex;
     flex: 0.5;

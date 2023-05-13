@@ -5,19 +5,15 @@ function sidebarBottom() {
     <div className='sidebarBottom'>
       <div className='sidebarBottom-container'>
         <div className='sidebarBottom-links'>
-          <p id='groups'>Groups</p>
-          <p id='events'>Events</p>
-          <p id='followed-hashtags'>Followed Hashtags</p>
+          <p id='groups' className='pointer'>Groups</p>
+          <p id='events' className='pointer'>Events</p>
+          <p id='followed-hashtags' className='pointer'>Followed Hashtags</p>
+          <p className='pointer'>Discover more</p>
         </div>
-        <div className='sidebarBottom-container-add-button'>
-          +
-        </div>
-      </div>
-      <div className='sidebarBottom-down-container'>
-        <p>Discover more</p>
       </div>
     </div>
   )
 }
 
 export default sidebarBottom
+

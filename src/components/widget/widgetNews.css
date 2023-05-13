@@ -1,14 +1,10 @@
 .widgetNews{
-    border: 1px solid red;
-    position: relative;
-    top: 25px;
-    /* width: 90%; */
+    /* border: 1px solid red; */
+    width: 100%;
     background-color: white;
-    /* height: 50vh; */
-    border-radius: 15px;
-    padding: 10px 10px;
-    line-height: 30px;
-    border: 1px solid rgb(227, 220, 220);
+    border-radius: 10px;
+    padding: 10px;
+    line-height: 25px;
 
 }
 #linkedin-news{

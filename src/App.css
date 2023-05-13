@@ -4,8 +4,10 @@
   box-sizing: border-box;
 }
 .section{
-  background-color: rgb(255, 254, 246);
+  background-color: whitesmoke;
   /* height: 100vh; */
   display: flex;
+  justify-content: space-around;
+  /* padding: 0px 200px; */
   /* flex-wrap: wrap; */
 }

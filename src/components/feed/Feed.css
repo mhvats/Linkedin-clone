@@ -1,0 +1,90 @@
+.feed {
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* flex: 0.35; */
+    width: 35%;
+    min-width: 350px;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+.feed-post {
+    background-color: white;
+    width: 100%;
+    /* border: 1px solid black; */
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.feed-post-top {
+    width: 100%;
+    /* border: 1px solid blue; */
+    padding: 0 5px;
+    display: flex;
+    align-items: center;
+
+}
+
+.feed-post-bottom {
+    width: 100%;
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: space-around;
+}
+
+input {
+    width: 70%;
+    border: 1px solid gray;
+    outline: none;
+    border-radius: 10px;
+}
+
+.feed-horizontal {
+    margin: 10px 0;
+    width: 90%;
+}
+
+.post {
+    /* border: 1px solid black; */
+    /* margin-top: 100px; */
+    width: 100%;
+    /* background-color: white; */
+    /* padding: 10px 0; */
+}
+
+.post-container {
+    /* border: 1px solid red; */
+    border-radius: 10px;
+    margin: 10px 0 ;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    /* margin: 100px 0; */
+}
+.post-top{
+    display: flex;
+    align-items: center;
+    padding: -5px 0;
+}
+.post-middle{
+    border-bottom: 1px solid rgb(232, 232, 232);
+    border-top: 1px solid rgb(232, 232, 232);
+    word-wrap: break-word;
+    min-height:50px ;
+    line-height: 15px;
+    /* border: 1px solid red; */
+    padding: 10px 5px;
+}
+.post-bottom{
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+.post-interaction:hover{
+    cursor: pointer;
+    color: red;
+}

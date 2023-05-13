@@ -9,7 +9,8 @@ import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import ModeCommentIcon from '@mui/icons-material/ModeComment';
 import AutorenewIcon from '@mui/icons-material/Autorenew';
 import SendIcon from '@mui/icons-material/Send';
-import './FeedR.css'
+// import './FeedR.css'
+import './Feed.css'
 function FeedR() {
     const [inputPost, setPostInput] = useState('');
     const [postArray, setPostArray] = useState([]);
@@ -47,6 +48,7 @@ function FeedR() {
                         value={inputPost}
                         onKeyDown={hanldeKeypress}
                         placeholder='Start a Post'
+                        style={{ margin: '15px 10px', padding: '10px' }}
                     />
                     {inputPost && <div onClick={handlePostButtonClick} onKeyDown={hanldeKeypress} className='feed-post-top-button'>Post</div>}
                 </div>
@@ -58,22 +60,39 @@ function FeedR() {
                 </div>
             </div>
             <hr className='feed-horizontal' />
-            <div>{
+            {/* <div className='post'>
+                <div className='post-container'>
+                    <div className='post-top'>
+                        <Avatar style={{margin:'10px 5px'}}/>
+                        <p style={{padding:'10px 0'}}>Mehul raj</p>
+                    </div>
+                    <div className='post-middle'>
+                        <p>This is textfladsjf;lkadsjlk;fjlasdjflkjasdlk;jflasdjlfjadsl;fjl;sdajfljasdlkfjladshfgkjadshkfhsadkhfkashdkfhdskajlhfkljashdflkhasdklhflkasj</p>
+                    </div>
+                    <div className='post-bottom'>
+                        <FavoriteBorderIcon />
+                        <ModeCommentIcon />
+                        <AutorenewIcon />
+                        <SendIcon />
+                    </div>
+                </div>
+            </div> */}
+            <div className='post'>{
                 postArray.map((item, index) => {
                     return (
-                        <div className='post' key={index}>
+                        <div className='post-container' key={index}>
                             <div className='post-top'>
-                                <Avatar />
-                                <p>Mehul raj</p>
+                                <Avatar style={{margin:'10px 5px'}}/>
+                                <p style={{padding:'10px 0'}}>Mehul raj</p>
                             </div>
                             <div className='post-middle'>
                                 <p>{item}</p>
                             </div>
                             <div className='post-bottom'>
-                                <FavoriteBorderIcon />
-                                <ModeCommentIcon />
-                                <AutorenewIcon />
-                                <SendIcon />
+                                <FavoriteBorderIcon className='post-interaction'/>
+                                <ModeCommentIcon  className='post-interaction'/>
+                                <AutorenewIcon className='post-interaction' />
+                                <SendIcon className='post-interaction' />
                             </div>
                         </div>
                     )

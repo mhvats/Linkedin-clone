@@ -1,27 +1,24 @@
-.sidebarBottom {
-    position: relative;
-    top: 30px;
-    /* height: 20vh; */
+/* .sidebarBottom {
     border: 1px solid rgb(227, 220, 220);
     width: 82%;
     border-radius: 10px;
     background-color: white;
-    /* display: flex; */
-    /* align-items: center; */
-    /* justify-content: center; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .sidebarBottom-container {
     padding: 15px 0;
     display: flex;
     justify-content: space-around;
-    /* border: 1px solid red; */
+    border: 1px solid red;
     width: 100%;
     font-size: 0.75rem;
 }
 
 .sidebarBottom-links {
-    /* border: 1px solid green; */
+    border: 1px solid green;
     position: relative;
     left: -15px;
     color: blue;
@@ -35,13 +32,13 @@
 }
 
 .sidebarBottom-container-add-button {
-    /* border: 1px solid blue; */
+    border: 1px solid blue;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 1.5rem;
     font-weight: 600;
-    /* height: 20px; */
+    height: 20px;
     cursor: pointer;
     color: gray;
 }
@@ -56,5 +53,24 @@
 
 .sidebarBottom-down-container:hover {
     background-color: rgb(227, 227, 227);
+    cursor: pointer;
+} */
+.sidebarBottom{
+    /* border: 1px solid red; */
+    position: sticky;
+    top: 335px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+.sidebarBottom-container{
+    /* border: 1px solid black; */
+    display: flex;
+    padding: 10px;
+    color: blue;
+    font-weight: 500;
+}
+.pointer{
+    /* border: 1px solid red; */
     cursor: pointer;
 }

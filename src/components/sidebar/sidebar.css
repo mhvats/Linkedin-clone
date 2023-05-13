@@ -1,7 +1,13 @@
 .sidebar-main {
+    /* border: 1px solid red; */
+    position: sticky;
+    top: 50px;
     display: flex;
     flex-direction: column;
-    flex: 0.25;
+    /* flex: 0.25; */
+    width: 20%;
+    min-width: 200px;
+    position: sticky;
     /* height: 100vh; */
     align-items: center;
     /* justify-content: center; */
@@ -9,8 +15,8 @@
     /* border: 1px solid black; */
 }
 
-@media screen and (max-width:480px) {
+/* @media screen and (max-width:480px) {
     .sidebar-main {
         visibility: hidden;
     }
-}
+} */
