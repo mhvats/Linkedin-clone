@@ -10,9 +10,9 @@
     min-width: 230px;
 }
 
-@media screen and (max-width : 480px) {
+/* @media screen and (max-width : 480px) {
     .widget{
         visibility: hidden;
     }
 
-}
+} */
