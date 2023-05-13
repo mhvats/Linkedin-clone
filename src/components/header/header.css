@@ -8,24 +8,25 @@
     text-align: center;
     border-bottom: 1px solid rgb(227, 224, 224);
     /* border-right: 1px solid grey; */
-    /* padding: px 0px; */
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     z-index: 999999;
-    /* overflow: hidden; */
     background-color: white;
 }
 .headerLeft-main{
-    /* border: 1px solid black; */
+    width: 15%;
+    border: 1px solid black;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
 }
 .headerRight-main{
-    width: 40%;
+    width: 35%;
     /* border-right: 1px solid grey; */
+    /* border: 1px solid red; */
     display: flex;
     justify-content: space-between;
+    align-items: center;
     border-right: 1px solid rgb(227, 224, 224);
     flex-wrap: wrap;
 }
