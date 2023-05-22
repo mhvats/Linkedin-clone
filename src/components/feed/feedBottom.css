@@ -1,0 +1,20 @@
+.feed-bottom-container{
+    width: 370px;
+    position:fixed;
+    bottom: 0;
+    /* height: 10px; */
+    background-color: white;
+    left: 5px;  
+    /* border: 1px solid black; */
+}
+.feed-bottom-icon{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    /* border: 1px solid red; */
+}
+@media screen and (min-width:450px) {
+    .feed-bottom-container{
+        display:none;
+    }
+}

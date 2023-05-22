@@ -15,8 +15,8 @@
     /* border: 1px solid black; */
 }
 
-/* @media screen and (max-width:480px) {
+@media screen and (max-width:450px) {
     .sidebar-main {
-        visibility: hidden;
+      display: none;
     }
-} */
+}

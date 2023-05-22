@@ -5,8 +5,9 @@ import VideoCameraBackIcon from "@mui/icons-material/VideoCameraBack";
 import EventIcon from "@mui/icons-material/Event";
 import NotesIcon from "@mui/icons-material/Notes";
 import HeaderRight from "../header/headerRight";
-import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
-import ModeCommentIcon from "@mui/icons-material/ModeComment";
+import { FeedBottom } from "./FeedBottom";
+// import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
+// import ModeCommentIcon from "@mui/icons-material/ModeComment";
 import AutorenewIcon from "@mui/icons-material/Autorenew";
 // import SendIcon from "@mui/icons-material/Send";
 import DeleteIcon from "@mui/icons-material/Delete";
@@ -109,8 +110,8 @@ function FeedR() {
           <HeaderRight Icon={EventIcon} title="Event" />
           <HeaderRight Icon={NotesIcon} title="Write Note" />
         </div>
+        <hr className="feed-horizontal" />
       </div>
-      <hr className="feed-horizontal" />
       {/* <div className='post'>
                 <div className='post-container'>
                     <div className='post-top'>
@@ -155,8 +156,8 @@ function FeedR() {
                 <p>{item.userPost}</p>
               </div>
               <div className="post-bottom">
-                <FavoriteBorderIcon className="post-interaction" />
-                <ModeCommentIcon className="post-interaction" />
+                {/* <FavoriteBorderIcon className="post-interaction" /> */}
+                {/* <ModeCommentIcon className="post-interaction" /> */}
                 <AutorenewIcon className="post-interaction" />
                 <DeleteIcon
                   onClick={() => deletePost(item.id)}
@@ -166,6 +167,9 @@ function FeedR() {
             </div>
           );
         })}
+      </div>
+      <div className="feed-bottom">
+        <FeedBottom />
       </div>
     </div>
   );

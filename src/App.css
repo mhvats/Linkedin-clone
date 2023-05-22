@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 .section {
-  background-color: whitesmoke;
+  background-color: rgb(255, 250, 234);
   /* height: 100vh; */
   display: flex;
   justify-content: space-around;

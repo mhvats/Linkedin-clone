@@ -88,13 +88,13 @@ input {
   min-height: 50px;
   line-height: 15px;
   /* border: 1px solid red; */
-  padding: 10px 5px;
+  padding: 10px 15px;
 }
 
 .post-bottom {
   padding: 5px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .post-interaction:hover {
@@ -107,6 +107,10 @@ input {
   display: flex;
   flex-direction: column;
 }
-.post-top-name > p {
-  /* border: 1px solid black; */
+@media screen and (max-width : 450px) {
+  .feed-post{
+    position: sticky;
+    top: 0;
+    z-index: 99999;
+  }
 }
