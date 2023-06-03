@@ -1,0 +1,12 @@
+input::placeholder{
+    border: 1px solid red;
+    padding-top: 1.25rem;
+    color: red;
+}
+.hello{
+    /* border: 1px solid red; */
+}
+.input-field{
+    padding: 10px 20px;
+    border: 1px solid blue;
+}
