@@ -1,12 +1,13 @@
-import "./login.css";
 import { useState } from "react";
-import { signInWithEmailAndPassword } from "firebase/auth";
+import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../feed/firebase";
-export const Login = () => {
-  const [loginUsername, setLoginUsername] = useState("");
-  const [loginPassword, setLoginPassword] = useState("");
+import "./register.css";
+export const Register = () => {
+  const [registerUsername, setRegisterUsername] = useState("");
+  const [registorPassword, setRegistorPassword] = useState("");
   const [toggle, setToggle] = useState(false);
   const toggleCheck = toggle ? "Hide" : "Show";
+  console.log(registerUsername);
   const handlePasswordToggle = () => {
     setToggle((prevState) => {
       return !prevState;
@@ -14,19 +15,19 @@ export const Login = () => {
   };
   const handleClick = async (e) => {
     e.preventDefault();
-    setLoginUsername("");
-    setLoginPassword("");
-    if (!loginUsername) {
+    setRegisterUsername("");
+    setRegistorPassword("");
+    if (!registerUsername) {
       alert("Please enter Email");
     }
-    if (!loginPassword) {
+    if (!registorPassword) {
       alert("Please enter Password");
     }
     try {
-      const user = await signInWithEmailAndPassword(
+      const user = await createUserWithEmailAndPassword(
         auth,
-        loginUsername,
-        loginPassword
+        registerUsername,
+        registorPassword
       );
       console.log(user);
     } catch (error) {
@@ -47,41 +48,52 @@ export const Login = () => {
       <div className="input-container">
         <div className="input-fields">
           <label>Email</label>
+          {/* <br></br> */}
           <input
             type="email"
-            value={loginUsername}
+            value={registerUsername}
             onChange={(e) => {
-              setLoginUsername(e.target.value);
+              setRegisterUsername(e.target.value);
             }}
           ></input>
         </div>
         <div className="input-fields">
-          <label>Password</label>
+          <label>Password{"(6 or more characters)"}</label>
+          {/* <br></br> */}
           <input
             type={toggle ? "text" : "password"}
-            value={loginPassword}
+            value={registorPassword}
             onChange={(e) => {
-              setLoginPassword(e.target.value);
+              setRegistorPassword(e.target.value);
             }}
           ></input>
-          {loginPassword && (
+          {registorPassword && (
             <p id="toggler" onClick={handlePasswordToggle}>
               {toggleCheck}
             </p>
           )}
         </div>
-        <div className="btn-container">
-          <button onClick={handleClick}>Sign In</button>
+        <div className="policy-container">
+          <p>
+            By clicking Agree & Join, you agree to the Linkedin{" "}
+            <span style={{ color: "blue" }}>
+              User Agreement, Privacy Policy,
+            </span>{" "}
+            and
+            <span style={{ color: "blue" }}> Cookie Policy</span>
+          </p>
         </div>
+        <div className="btn-container">
+          <button onClick={handleClick}>Agree & Join</button>
+        </div>
+        <h5>
+          <span>or</span>
+        </h5>
       </div>
       {/* Closing of Input fields */}
       <div>
-        Not a user?{" "}
-        <span style={{ color: "blue", cursor: "pointer" }}>Register</span>
-        {" or "}
-        <span style={{ color: "blue", cursor: "pointer" }}>
-          Forgot Password
-        </span>
+        Already a user?{" "}
+        <span style={{ color: "blue", cursor: "pointer" }}>Sign In</span>
       </div>
     </div>
   );
