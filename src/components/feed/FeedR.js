@@ -23,6 +23,8 @@ import {
   deleteDoc,
   doc,
 } from "firebase/firestore";
+import {auth} from './firebase';
+import { signOut } from "firebase/auth";
 function FeedR() {
   const [inputPost, setInputPost] = useState("");
   const [postArray, setPostArray] = useState([]);
@@ -79,12 +81,18 @@ function FeedR() {
     postList();
     console.log("post delted");
   };
+  const signOutBtn = async()=>{
+await auth.signOut();
+  }
   useEffect(() => {
     postList();
   }, []);
   // console.log(inputPost);
   return (
     <div className="feed">
+      <div>
+        <button onClick={signOutBtn}>Sign out</button>
+      </div>
       <div className="feed-post">
         <form onSubmit={handleSubmit} className="feed-post-top">
           <Avatar className="feed-post-top-avatar" title="User" />

@@ -2,7 +2,9 @@ import { useState } from "react";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../feed/firebase";
 import "./register.css";
+import { useNavigate } from "react-router-dom";
 export const Register = () => {
+  const navigate = useNavigate();
   const [registerUsername, setRegisterUsername] = useState("");
   const [registorPassword, setRegistorPassword] = useState("");
   const [toggle, setToggle] = useState(false);
@@ -29,6 +31,7 @@ export const Register = () => {
         registerUsername,
         registorPassword
       );
+      navigate('/login')
       console.log(user);
     } catch (error) {
       console.log(error);
@@ -93,7 +96,7 @@ export const Register = () => {
       {/* Closing of Input fields */}
       <div>
         Already a user?{" "}
-        <span style={{ color: "blue", cursor: "pointer" }}>Sign In</span>
+        <span style={{ color: "blue", cursor: "pointer" }} onClick={()=> navigate("/")}>Sign In</span>
       </div>
     </div>
   );

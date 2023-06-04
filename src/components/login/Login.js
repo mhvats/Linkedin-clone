@@ -1,8 +1,11 @@
 import "./login.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../feed/firebase";
+import { useNavigate } from "react-router-dom";
+import { onAuthStateChanged } from "firebase/auth";
 export const Login = () => {
+  const navigate = useNavigate();
   const [loginUsername, setLoginUsername] = useState("");
   const [loginPassword, setLoginPassword] = useState("");
   const [toggle, setToggle] = useState(false);
@@ -28,11 +31,19 @@ export const Login = () => {
         loginUsername,
         loginPassword
       );
+      navigate("/home");
       console.log(user);
     } catch (error) {
       console.log(error);
     }
   };
+  useEffect(() => {
+    onAuthStateChanged(auth, (res) => {
+      if (res?.accessToken) {
+        navigate("/home");
+      }
+    });
+  }, []);
   return (
     <div className="main-container">
       <div className="logo-container">
@@ -77,9 +88,17 @@ export const Login = () => {
       {/* Closing of Input fields */}
       <div>
         Not a user?{" "}
-        <span style={{ color: "blue", cursor: "pointer" }}>Register</span>
+        <span
+          style={{ color: "blue", cursor: "pointer" }}
+          onClick={() => navigate("/register")}
+        >
+          Register
+        </span>
         {" or "}
-        <span style={{ color: "blue", cursor: "pointer" }}>
+        <span
+          style={{ color: "blue", cursor: "pointer" }}
+          title="NOT CLICKABLE"
+        >
           Forgot Password
         </span>
       </div>
