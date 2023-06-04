@@ -31,7 +31,7 @@ export const Login = () => {
         loginUsername,
         loginPassword
       );
-      navigate("/home");
+      navigate("/profile");
       console.log(user);
     } catch (error) {
       console.log(error);

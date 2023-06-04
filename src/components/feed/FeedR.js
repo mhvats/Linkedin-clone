@@ -13,6 +13,8 @@ import AutorenewIcon from "@mui/icons-material/Autorenew";
 import DeleteIcon from "@mui/icons-material/Delete";
 import "./Feed.css";
 import { db } from "./firebase";
+// import { onAuthStateChanged } from "firebase/auth";
+import { useNavigate } from "react-router-dom";
 import {
   addDoc,
   collection,
@@ -23,11 +25,14 @@ import {
   deleteDoc,
   doc,
 } from "firebase/firestore";
-import {auth} from './firebase';
+import { auth } from "./firebase";
 import { signOut } from "firebase/auth";
+import { Profile } from "../profile/Profile";
 function FeedR() {
+  const navigate = useNavigate();
   const [inputPost, setInputPost] = useState("");
   const [postArray, setPostArray] = useState([]);
+  const [profileToggle, setProfileToggle] = useState(false);
   const postRef = collection(db, "posts");
   const postList = async () => {
     // e.preventDefault();
@@ -81,9 +86,16 @@ function FeedR() {
     postList();
     console.log("post delted");
   };
-  const signOutBtn = async()=>{
-await auth.signOut();
-  }
+  const signOutBtn = async () => {
+    await auth.signOut();
+  };
+  const handleProfileClick = () => {
+    // setProfileToggle((prevState) => {
+    //   return !prevState;
+    // });
+    // console.log(profileToggle);
+    // onAuthStateChanged(auth,)
+  };
   useEffect(() => {
     postList();
   }, []);
@@ -93,6 +105,10 @@ await auth.signOut();
       <div>
         <button onClick={signOutBtn}>Sign out</button>
       </div>
+      <div>
+        <button onClick={() => navigate("/profile")}>Profile</button>
+      </div>
+      {/* <div style={{}}>{profileToggle === true && <Profile />}</div> */}
       <div className="feed-post">
         <form onSubmit={handleSubmit} className="feed-post-top">
           <Avatar className="feed-post-top-avatar" title="User" />

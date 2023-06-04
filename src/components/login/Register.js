@@ -31,7 +31,7 @@ export const Register = () => {
         registerUsername,
         registorPassword
       );
-      navigate('/login')
+      navigate('/')
       console.log(user);
     } catch (error) {
       console.log(error);
